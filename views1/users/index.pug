@@ -1,0 +1,11 @@
+h1 #{title}
+a(href="/users/create") New User.
+form(action="/users/search" method="GET")
+  input(type='text' name='q' value= value)
+  button search
+ul
+  each user in users
+    li
+     span= user.name
+     span &nbsp;
+     a(href="/users/" + user.id) view.
